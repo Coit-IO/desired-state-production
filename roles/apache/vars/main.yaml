@@ -1,0 +1,11 @@
+    index_file: index.html
+    website_name: devops.com
+    list_of_websites:
+      - web1.com
+      - web3.com
+      - mycompany.com
+    database:
+      name: wpdb
+      username: wpuser
+      password: DEVOPS123
+      host: localhost

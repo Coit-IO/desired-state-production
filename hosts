@@ -1,0 +1,23 @@
+[webservers]
+172.31.45.163 website_name=webcom.com 
+172.31.47.40
+172.31.39.18 ansible_user=ec2-user
+
+[dbservers]
+172.31.47.40
+
+[wordpressservers]
+172.31.45.163
+
+[webservers:vars]
+package_name=apache2
+apache_version=2.4
+server_os=ubuntu
+
+[webanddb:children]
+webservers
+dbservers
+
+[webanddb:vars]
+location=mumbai
+customer=jio

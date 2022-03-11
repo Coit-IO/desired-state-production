@@ -1,0 +1,7 @@
+{% for website_name in list_of_websites %}
+<VirtualHost *:80>
+  ServerName {{ website_name }}
+  DocumentRoot /var/www/{{ website_name }}
+</VirtualHost>
+
+{% endfor %}

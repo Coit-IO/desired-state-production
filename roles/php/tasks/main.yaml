@@ -1,0 +1,9 @@
+- name: make sure that php module for apache is installed
+  apt:
+    name: "{{ php_apache_package }}"
+    state: latest
+    update_cache: yes
+- name: make sure that test.php file is present in /var/www/html
+  copy:
+    src: test.php
+    dest: /var/www/html/test.php
